@@ -6,7 +6,7 @@
 }
 
 .btn {
-  padding: $gutter / 2;
+  padding: ($gutter / 4 - 0.2rem) $gutter / 2 ($gutter / 4);
   border: 0;
 
   background: $brand-orange;

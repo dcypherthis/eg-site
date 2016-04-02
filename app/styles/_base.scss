@@ -32,3 +32,12 @@ body {
 a {
   color: $brand-orange;
 }
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+input {
+  outline: none;
+}

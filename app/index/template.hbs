@@ -1,0 +1,7 @@
+<ul class="free-lessons">
+  {{#each model as |freeLesson|}}
+    <li class="free-lesson">
+      {{link-to freeLesson.title 'free-lessons' freeLesson}}
+    </li>
+  {{/each}}
+</ul>

@@ -6,6 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('free-lessons', {
+    path: '/:free_lesson_id'
+  });
 });
 
 export default Router;

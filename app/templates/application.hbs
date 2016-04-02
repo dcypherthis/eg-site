@@ -1,5 +1,19 @@
 <screen>
   {{top-nav}}
 
+  <div class="alert-list">
+    {{#each flashMessages.queue as |flash|}}
+      {{#flash-message flash=flash as |component flash|}}
+        <div class="alert__actions">
+          <h6 class="alert__type">{{component.flashType}}</h6>
+          <span class="fa fa-remove"></span>
+        </div>
+
+        <p class="alert__message">{{flash.message}}</p>
+      {{/flash-message}}
+    {{/each}}
+  </div>
+
   {{outlet}}
+
 </screen>

@@ -3,6 +3,8 @@
 
 $brand-orange: #e1563f;
 $brand-red: #f8393c;
+$brand-success: #0c9458;
+$brand-warning: #eebf40;
 $brand-gray: #3c3635;
 $brand-white: #efefef;
 $brand-black: #444;
@@ -25,4 +27,5 @@ $brand-display: Play, sans-serif;
 @import "buttons";
 @import "form-field";
 @import "footer";
+@import "alerts";
 @import "mobile/base";

@@ -1,0 +1,43 @@
+.alert-list {
+  position: fixed;
+  top: $gutter * 2;
+  right: 0;
+}
+
+.alert {
+  margin: $gutter / 2;
+  padding: $gutter / 2;
+
+  background: $brand-white;
+  box-shadow: $brand-card-shadow;
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: (-$gutter / 2) (-$gutter / 2) 0;
+    padding: $gutter / 2;
+
+    font-size: 0.8rem;
+  }
+
+  &__type {
+    margin: 0;
+    font-size: 1em;
+  }
+
+  &__message {
+    margin: $gutter / 2 0 0;
+  }
+
+  &-success &__actions {
+    background: $brand-success;
+    color: $brand-white;
+  }
+
+  &-warning &__actions {
+    background: $brand-warning;
+    color: $brand-white;
+  }
+}

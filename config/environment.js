@@ -13,6 +13,10 @@ module.exports = function(environment) {
       }
     },
 
+    flashMessageDefaults: {
+      timeout: 5000,
+    },
+
     googleFonts: [
       'Open+Sans:400,300',
       'Play:400,700',

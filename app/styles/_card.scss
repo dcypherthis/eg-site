@@ -1,0 +1,30 @@
+.card {
+  align-self: center;
+  width: 100%;
+  max-width: 45rem;
+  padding: 0;
+
+  box-shadow: $brand-card-shadow;
+
+  &__title {
+    margin: 0;
+    padding: 0 $gutter;
+    font-size: 2rem;
+    line-height: 1.6em;
+    font-family: $brand-display;
+    font-weight: 300;
+    text-shadow: $brand-text-shadow;
+
+    text-transform: lowercase;
+
+    background: $brand-orange;
+    color: $brand-white;
+    border-bottom: $basic-border;
+  }
+
+  &__body {
+    padding: $gutter / 2 $gutter;
+
+    background: $brand-white;
+  }
+}

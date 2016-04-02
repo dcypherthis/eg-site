@@ -1,0 +1,23 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-size: 0.8rem;
+  }
+
+  &__input {
+    padding: 0 0 0.2rem;
+
+    border: 0;
+    border-bottom: $basic-border;
+
+    background: none;
+
+    font-size: 1rem;
+  }
+
+  + .form-field {
+    margin-top: $gutter / 2;
+  }
+}

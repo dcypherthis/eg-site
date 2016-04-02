@@ -15,6 +15,8 @@ Router.map(function() {
       path: '/:course_abstract_id'
     });
   });
+
+  this.route('signup');
 });
 
 export default Router;

@@ -20,6 +20,7 @@
   }
 
   &__video {
-    margin: $gutter 0 $gutter * 2;
+    margin: $gutter auto $gutter * 2;
+    width: 80%;
   }
 }

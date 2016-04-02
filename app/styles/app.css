@@ -1,4 +1,35 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
 .container {
-  max-width: 40rem;
+  max-width: 65rem;
   margin: auto;
+}
+
+.top-nav {
+  background: #e1563f;
+  overflow: hidden;
+
+  font-family: Play, sans-serif;
+
+  padding: 0.4rem;
+}
+
+.top-nav__brand {
+  position: relative;
+  top: -0.2rem;
+  margin: 0;
+
+  font-size: 2.4rem;
+}
+
+.top-nav__brand a {
+  color: #efefef;
+  text-decoration: none;
+}
+
+.sr-only {
+  display: none;
 }

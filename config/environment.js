@@ -13,6 +13,12 @@ module.exports = function(environment) {
       }
     },
 
+    googleFonts: [
+      'Open+Sans:400,300',
+      'Play:400,700',
+      'Inconsolata',
+    ],
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

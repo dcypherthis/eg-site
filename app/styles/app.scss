@@ -21,8 +21,9 @@ $brand-display: Play, sans-serif;
 @include yoga-prototype();
 
 @import "base";
-@import "header";
 @import "grid";
+@import "header";
+@import "hero";
 @import "card";
 @import "buttons";
 @import "form-field";

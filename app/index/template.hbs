@@ -1,3 +1,24 @@
+<header class="home-hero">
+  <div class="yg-container">
+    <div class="home-hero__content">
+      {{#with (latest model.courses 'releaseDate') as |newestCourse|}}
+        <h2 class="home-hero__message">
+          New Course: {{newestCourse.name}}
+        </h2>
+
+        <p class="home-hero__actions">
+          {{link-to "learn more" "course-previews.detail" newestCourse class="btn home-hero__btn"}}
+          {{link-to "buy now" "course-previews.detail" newestCourse class="btn home-hero__btn"}}
+        </p>
+      {{/with}}
+
+      <div class="home-hero__video">
+        {{ivy-videojs src=promoVideo controls=true fluid=true poster="/img/placeholder.png"}}
+      </div>
+    </div>
+  </div>
+</header>
+
 <grid>
   <div class="free-lessons">
     <h2>Free Lessons</h2>

@@ -1,0 +1,19 @@
+@import "yoga";
+@import "bower_components/font-awesome/scss/font-awesome";
+
+$brand-orange: #e1563f;
+$brand-gray: #3c3635;
+$brand-white: #efefef;
+$brand-black: #444;
+
+$brand-text-shadow: 0 1px 2px #331915, 0 1px 0 #331915;
+$basic-border: 1px solid lighten($brand-gray, 20%);
+
+// Uncomment this for working with yoga prototyping
+// http://rtablada.github.io/yoga-sass/#mixin-yoga-prototype
+@include yoga-prototype();
+
+@import "base";
+@import "header";
+@import "footer";
+@import "mobile/base";

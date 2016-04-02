@@ -1,13 +1,12 @@
 /*jshint node:true*/
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
-var shim = require('flexi/lib/pod-templates-shim');
-
-shim(EmberApp);
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    emberCliFontAwesome: {
+      useScss: true
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated

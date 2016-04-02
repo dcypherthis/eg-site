@@ -1,5 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: '',
+  classNames: ['top-nav'],
+
+  actions: {
+    toggleMenu() {
+      this.$().toggleClass('active');
+    },
+  },
 });

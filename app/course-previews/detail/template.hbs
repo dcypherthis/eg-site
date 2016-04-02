@@ -1,0 +1,8 @@
+<h2>{{model.name}}</h2>
+
+<h3>Lessons</h3>
+<ul>
+  {{#each model.lessons as |lesson|}}
+    <li>{{lesson.title}} - {{sec-to-human lesson.time}}</li>
+  {{/each}}
+</ul>

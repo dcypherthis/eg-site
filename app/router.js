@@ -9,6 +9,12 @@ Router.map(function() {
   this.route('free-lessons', {
     path: '/:free_lesson_id'
   });
+
+  this.route('course-previews', function() {
+    this.route('detail', {
+      path: '/:course_abstract_id'
+    });
+  });
 });
 
 export default Router;

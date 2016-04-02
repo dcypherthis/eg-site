@@ -2,6 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll(`free-lesson`);
+    return Ember.RSVP.hash({
+      lessons: this.store.findAll(`free-lesson`),
+      courses: this.store.findAll(`course-abstract`),
+    });
   }
 });

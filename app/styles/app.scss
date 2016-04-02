@@ -22,6 +22,7 @@ $brand-display: Play, sans-serif;
 
 @import "base";
 @import "grid";
+
 @import "header";
 @import "hero";
 @import "card";
@@ -29,4 +30,7 @@ $brand-display: Play, sans-serif;
 @import "form-field";
 @import "footer";
 @import "alerts";
+
 @import "mobile/base";
+
+@import "home";

@@ -1,0 +1,28 @@
+.home-subheading {
+  font-family: $brand-display;
+  font-weight: 300;
+}
+
+.home-list {
+  min-width: 20rem;
+  font-weight: 300;
+
+  &__heading {
+    margin-top: 0;
+    border-bottom: $basic-border;
+
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  &__item {
+    font-size: 1.2rem;
+
+    &::before {
+      margin-right: 10px;
+      margin-left: 6px;
+      font-family: FontAwesome;
+      content: "\f105";
+    }
+  }
+}

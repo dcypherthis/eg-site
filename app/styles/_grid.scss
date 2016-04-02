@@ -1,3 +1,23 @@
+@mixin grid($cols) {
+  @for $right from 1 through $cols {
+    @for $left from 1 through $right {
+      &-#{$left}of#{$right} {
+        margin: 0 $gutter;
+        flex-basis: calc(100% * #{$left} / #{$right} - #{$gutter} - #{$gutter});
+      }
+    }
+  }
+}
+
 .yg-space-around {
   justify-content: space-around;
+}
+
+.yg-row {
+  width: calc(100% + #{$gutter} + #{$gutter});
+  margin: 0 (-$gutter);
+}
+
+.yg-col {
+  @include grid(6);
 }

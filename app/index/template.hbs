@@ -19,26 +19,35 @@
   </div>
 </header>
 
-<grid>
-  <div class="free-lessons">
-    <h2>Free Lessons</h2>
-    <ul>
-      {{#each model.lessons as |lesson|}}
-        <li class="free-lesson">
-          {{link-to lesson.title 'free-lessons' lesson}}
-        </li>
-      {{/each}}
-    </ul>
-  </div>
+<div class="yg-container">
+  <div class="yg-row">
+    <div class="yg-col-1of1">
+      <h2 class="home-subheading">Ember.js videos to get you up and running</h2>
+    </div>
+    <div class="yg-col-1of2">
+      <div class="home-list">
+        <h3 class="home-list__heading">Free Lessons</h3>
 
-  <div class="free-lessons">
-    <h2>Available Courses</h2>
-    <ul>
-      {{#each model.courses as |course|}}
-        <li class="free-lesson">
-          {{link-to course.name 'course-previews.detail' course}}
-        </li>
-      {{/each}}
-    </ul>
+        <ul>
+          {{#each model.lessons as |lesson|}}
+            <li class="home-list__item">
+              {{link-to lesson.title 'free-lessons' lesson class="home-list__link"}}
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    <div class="yg-col-1of2">
+      <div class="home-list">
+        <h3 class="home-list__heading">Available Courses</h3>
+        <ul>
+          {{#each model.courses as |course|}}
+            <li class="home-list__item">
+              {{link-to course.name 'course-previews.detail' course}}
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
   </div>
-</grid>
+</div>

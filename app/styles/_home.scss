@@ -1,6 +1,13 @@
-.home-subheading {
-  font-family: $brand-display;
-  font-weight: 300;
+.home-section {
+  &__heading {
+    font-family: $brand-display;
+    font-weight: 300;
+  }
+
+  &--author {
+    background: $brand-blue;
+    color: $brand-white;
+  }
 }
 
 .home-list {

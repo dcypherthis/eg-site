@@ -13,41 +13,70 @@
       {{/with}}
 
       <div class="home-hero__video">
-        {{ivy-videojs src=promoVideo controls=true fluid=true poster="/img/placeholder.png"}}
+        {{!-- {{ivy-videojs src=promoVideo controls=true fluid=true poster="/img/placeholder.png"}} --}}
       </div>
     </div>
   </div>
 </header>
 
-<div class="yg-container">
-  <div class="yg-row">
-    <div class="yg-col-1of1">
-      <h2 class="home-subheading">Ember.js videos to get you up and running</h2>
-    </div>
-    <div class="yg-col-1of2">
-      <div class="home-list">
-        <h3 class="home-list__heading">Free Lessons</h3>
-
-        <ul>
-          {{#each model.lessons as |lesson|}}
-            <li class="home-list__item">
-              {{link-to lesson.title 'free-lessons' lesson class="home-list__link"}}
-            </li>
-          {{/each}}
-        </ul>
+<section class="home-section">
+  <div class="yg-container">
+    <div class="yg-row">
+      <div class="yg-col-1of1">
+        <h2 class="home-section__heading">Ember.js videos to get you up and running</h2>
       </div>
-    </div>
-    <div class="yg-col-1of2">
-      <div class="home-list">
-        <h3 class="home-list__heading">Available Courses</h3>
-        <ul>
-          {{#each model.courses as |course|}}
-            <li class="home-list__item">
-              {{link-to course.name 'course-previews.detail' course}}
-            </li>
-          {{/each}}
-        </ul>
+      <div class="yg-col-1of2">
+        <div class="home-list">
+          <h3 class="home-list__heading">Free Lessons</h3>
+
+          <ul>
+            {{#each model.lessons as |lesson|}}
+              <li class="home-list__item">
+                {{link-to lesson.title 'free-lessons' lesson class="home-list__link"}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      <div class="yg-col-1of2">
+        <div class="home-list">
+          <h3 class="home-list__heading">Available Courses</h3>
+          <ul>
+            {{#each model.courses as |course|}}
+              <li class="home-list__item">
+                {{link-to course.name 'course-previews.detail' course}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<section class="home-section home-section--author">
+  <div class="yg-container">
+    <div class="yg-row">
+      <div class="yg-col-1of1">
+        <h2 class="home-section__heading">Behind the Voice</h2>
+      </div>
+
+      <div class="yg-col-2of6">
+        <div class="pic-frame">
+          <img class="pic-frame__pic" src="/img/ryan.jpg" alt="Ryan Tablada">
+        </div>
+      </div>
+
+      <div class="yg-col-4of6">
+        <h3 class="home-section__heading">Ryan Tablada</h3>
+
+        <p>
+          If you don't know me, I've been working with Ember.js since v0.9.5 (those were painful days).
+          I now teach Javascript and web technology at The Iron Yard, run the <a target="_blank" href="https://www.meetup.com/Nashville-EmberJS/">Nashville Ember Meetup</a> and I blog at ryantablada.com.
+          I have created custom Ember apps for Kenny Chesney, Blue Chair Bay Rum, along with other companies in music and healthcare.
+          I've also written a book on Select2, guested on the Laravel.io podcast, and presented at the Atlanta Ember Meetup.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

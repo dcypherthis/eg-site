@@ -2,6 +2,7 @@
 @import "bower_components/font-awesome/scss/font-awesome";
 
 $brand-orange: #e1563f;
+$brand-blue: #15647a;
 $brand-red: #f8393c;
 $brand-success: #0c9458;
 $brand-warning: #eebf40;
@@ -30,6 +31,7 @@ $brand-display: Play, sans-serif;
 @import "form-field";
 @import "footer";
 @import "alerts";
+@import "pic";
 
 @import "mobile/base";
 

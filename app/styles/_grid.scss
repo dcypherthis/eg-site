@@ -4,6 +4,7 @@
       &-#{$left}of#{$right} {
         margin: 0 $gutter;
         flex-basis: calc(100% * #{$left} / #{$right} - #{$gutter} - #{$gutter});
+        flex-grow: 1;
       }
     }
   }

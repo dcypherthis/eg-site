@@ -1,5 +1,8 @@
 .home-section {
+  padding: $gutter;
+
   &__heading {
+    margin-top: 0;
     font-family: $brand-display;
     font-weight: 300;
   }

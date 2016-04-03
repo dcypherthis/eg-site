@@ -7,6 +7,8 @@
     "ember-qunit-notifications": "0.1.0",
     "video.js": "^5.0.0",
     "plyr": "^1.5.21",
-    "font-awesome": "~4.5.0"
+    "font-awesome": "~4.5.0",
+    "marked": "^0.3.5",
+    "highlightjs": "^9.2.0"
   }
 }

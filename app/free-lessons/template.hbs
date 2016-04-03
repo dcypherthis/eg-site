@@ -1,3 +1,35 @@
-<div class="container">
-  {{ivy-videojs src=model.video.hdUrl controls=true fluid=true poster="/img/placeholder.png" setup=videoOptions}}
-</div>
+<section class="lesson-section lesson-section--video-screen lesson-section--free-lesson">
+  <div class="yg-container">
+    <div class="yg-row">
+      <div class="yg-col-1of1">
+        <div class="video-screen">
+          {{ivy-videojs src=model.video.hdUrl controls=true fluid=true poster="/img/placeholder.png" setup=videoOptions}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section lesson-section--info">
+  {{#ivy-tabs class="tab-view" as |tabsContainer|}}
+    {{#ivy-tab-list class="tab-selector" tabsContainer=tabsContainer as |tabList|}}
+      <div class="yg-container">
+        {{#ivy-tab class="tab-selector__choice" tabList=tabList}}Lesson Notes{{/ivy-tab}}
+        {{#ivy-tab class="tab-selector__choice" tabList=tabList}}Bar{{/ivy-tab}}
+      </div>
+    {{/ivy-tab-list}}
+    <div class="yg-container">
+      <div class="yg-row">
+        <div class="yg-col-1of1">
+          {{#ivy-tab-panel tabsContainer=tabsContainer}}
+            {{format-markdown model.lessonNotes}}
+          {{/ivy-tab-panel}}
+
+          {{#ivy-tab-panel tabsContainer=tabsContainer}}
+            <h2>Bar</h2>
+          {{/ivy-tab-panel}}
+        </div>
+      </div>
+    </div>
+  {{/ivy-tabs}}
+</section>

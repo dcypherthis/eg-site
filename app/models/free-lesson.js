@@ -4,6 +4,7 @@ export default DS.Model.extend({
   title: DS.attr(),
   time: DS.attr(),
   description: DS.attr(),
+  lessonNotes: DS.attr(),
 
   video: DS.belongsTo('free-video'),
 });

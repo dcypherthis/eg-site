@@ -49,8 +49,10 @@
     "ember-simple-auth-registration": "1.0.2",
     "ember-simple-form": "1.0.1",
     "ember-yoga-sass": "1.0.0",
+    "ivy-tabs": "1.2.0",
     "ivy-videojs": "0.6.2",
     "loader.js": "^4.0.1",
+    "markdown-code-highlighting": "0.0.6",
     "validatorjs": "^2.0.5",
     "yoga-sass": "1.0.1"
   }

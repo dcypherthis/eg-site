@@ -1,0 +1,25 @@
+.tab-view {
+
+}
+
+.tab-selector {
+  display: flex;
+  border-bottom: $basic-border;
+
+
+  &__choice {
+    cursor: pointer;
+    padding: $gutter / 2;
+    border: $basic-border;
+    border-bottom: 0;
+
+    &.active {
+      background: $brand-orange;
+      color: $brand-white;
+    }
+
+    + * {
+      margin-left: $gutter / 2;
+    }
+  }
+}

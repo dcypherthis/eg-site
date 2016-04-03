@@ -8,6 +8,7 @@ $brand-success: #0c9458;
 $brand-warning: #eebf40;
 $brand-gray: #3c3635;
 $brand-white: #efefef;
+$brand-code-white: #fff;
 $brand-black: #444;
 $brand-bg: #f3e5de;
 
@@ -33,7 +34,9 @@ $brand-display: Play, sans-serif;
 @import "alerts";
 @import "pic";
 @import "video";
+@import "tabs";
 
 @import "mobile/base";
 
 @import "home";
+@import "lesson";

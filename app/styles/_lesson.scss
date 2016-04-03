@@ -1,0 +1,16 @@
+.lesson-section {
+  overflow: auto;
+
+  &--video-screen {
+    padding: $gutter;
+    background: $brand-black;
+  }
+
+  &--free-lesson {
+    margin-top: -$gutter;
+  }
+
+  &--info {
+    margin-bottom: $gutter;
+  }
+}

@@ -8,6 +8,7 @@ module.exports = function(defaults) {
       useScss: true
     }
   });
+  app.import(`bower_components/highlightjs/styles/github.css`);
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

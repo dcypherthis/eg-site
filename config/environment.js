@@ -13,6 +13,15 @@ module.exports = function(environment) {
       }
     },
 
+    'ember-simple-auth-token': {
+      serverTokenEndpoint: `http://localhost:8000/auth-token`,
+      identificationField: 'username',
+    },
+
+    'ember-simple-auth': {
+      authorizer: 'authorizer:token',
+    },
+
     flashMessageDefaults: {
       timeout: 5000,
     },

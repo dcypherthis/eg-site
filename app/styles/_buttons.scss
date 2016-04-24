@@ -16,12 +16,18 @@
 
   background: $brand-orange;
 
+  color: $brand-white;
+
+  font-family: $brand-display;
   font-size: 1.4rem;
   line-height: 1em;
-  font-family: $brand-display;
-
-  color: $brand-white;
-  text-shadow: $brand-text-shadow;
 
   text-decoration: none;
+
+  text-shadow: $brand-text-shadow;
+
+  &--small {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
 }

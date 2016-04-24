@@ -23,6 +23,10 @@ Router.map(function routeMap() {
   });
 
   this.route(`reset-password`, { path: `password/reset` });
+
+  this.route('course-purchase', {
+    path: '/course-purchase/:course_abstract_id'
+  });
 });
 
 export default Router;

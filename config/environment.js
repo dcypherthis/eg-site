@@ -1,4 +1,7 @@
 /* jshint node: true */
+/* global process */
+
+require(`dotenv`).config();
 
 module.exports = function (environment) {
   var ENV = {
@@ -6,6 +9,8 @@ module.exports = function (environment) {
     environment: environment,
     apiUrl: `http://localhost:8000`,
     baseURL: `/`,
+    stripeKey: process.env.STRIPE_KEY,
+    stripeCheckoutImg: '/public/checkout-logo.png',
     locationType: `auto`,
     EmberENV: {
       FEATURES: {

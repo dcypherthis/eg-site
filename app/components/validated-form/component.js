@@ -3,7 +3,7 @@ import BufferedProxy from 'ember-buffered-proxy/proxy';
 import Validator from 'npm:validatorjs';
 
 export default Ember.Component.extend({
-  tagName: 'form',
+  tagName: `form`,
 
   formValues: null,
 
@@ -15,7 +15,7 @@ export default Ember.Component.extend({
   didReceiveAttrs() {
     this._super(...arguments);
     let startingValues = this.getAttr(`startingValues`) || {};
-    let formValues = BufferedProxy.create({content: startingValues});
+    let formValues = BufferedProxy.create({ content: startingValues });
 
     this.set(`formValues`, formValues);
   },

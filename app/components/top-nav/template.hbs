@@ -9,6 +9,7 @@
 
   {{#if session.isAuthenticated}}
     <li>{{link-to "account" "account.purchases" class="top-nav__link"}}</li>
+    <li><a href="#" class="top-nav__link" {{action "logout"}}>logout</a></li>
   {{else}}
     <li>{{link-to "signup" "signup" class="top-nav__link"}}</li>
     <li>{{link-to "login" "login" class="top-nav__link"}}</li>

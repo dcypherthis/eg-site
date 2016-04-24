@@ -6,7 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function routeMap() {
-  this.route(`free-lessons`, { path: `/:free_lesson_id` });
+  this.route(`free-lessons`, { path: `free-lesson/:free_lesson_id` });
 
   this.route(`course-previews`, function coursePreview() {
     this.route(`detail`, { path: `/:course_abstract_id` });
@@ -16,8 +16,11 @@ Router.map(function routeMap() {
   this.route(`login`);
   this.route(`forgot-password`);
 
-  this.route('license');
-  return null;
+  this.route(`license`);
+
+  this.route('account', function() {
+    this.route('purchases');
+  });
 });
 
 export default Router;

@@ -1,0 +1,11 @@
+<div class="tab-selector">
+  <ul class="yg-container tab-selector__container">
+    <li class="tab-selector__heading">Account</li>
+
+    {{#link-to "account.purchases" tagName="li" class="tab-selector__choice"}}
+      {{link-to "Purchases" "account.purchases"}}
+    {{/link-to}}
+  </ul>
+</div>
+
+<div class="admin-area">{{outlet}}</div>

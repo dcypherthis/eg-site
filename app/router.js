@@ -21,6 +21,8 @@ Router.map(function routeMap() {
   this.route('account', function() {
     this.route('purchases');
   });
+
+  this.route(`reset-password`, { path: `password/reset` });
 });
 
 export default Router;

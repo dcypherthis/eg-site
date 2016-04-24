@@ -16,6 +16,7 @@ Router.map(function routeMap() {
   this.route(`login`);
   this.route(`forgot-password`);
 
+  this.route('license');
   return null;
 });
 

@@ -1,0 +1,37 @@
+<div class="yg-container">
+  <div class="yg-row yg-space-around">
+    <div class="card">
+      <h2 class="card__title">Password Reset</h2>
+
+      <div class="card__body">
+        {{#validated-form rules=rules onsubmit=(action "resetPassword" token) as |register errors|}}
+          <div class="form-field">
+            <label class="form-field__label" for="register-email">Email</label>
+            {{input class="form-field__input" id="register-email" placeholder="Email" value=register.email}}
+
+            {{#if (has-error errors "email")}}
+              <p class="form-field__message form-field__message--error">{{validation-error errors "email"}}</p>
+            {{/if}}
+          </div>
+
+          <div class="form-field">
+            <label class="form-field__label" for="register-password">New Password</label>
+            {{input type="password" class="form-field__input" id="register-password" placeholder="Password" value=register.password}}
+
+            {{#if (has-error errors "password")}}
+              <p class="form-field__message form-field__message--error">{{validation-error errors "password"}}</p>
+            {{/if}}
+          </div>
+
+          <div class="form-field">
+            <label class="form-field__label" for="register-password-confirm">New Password Confirmation</label>
+            {{input type="password" class="form-field__input" id="register-password-confirm" placeholder="Password Confirmation" value=register.password_confirmation}}
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--success">send</button>
+          </div>
+        {{/validated-form}}</div>
+    </div>
+  </div>
+</div>

@@ -10,5 +10,9 @@ export function jsonRequestOptions(method, data) {
 }
 
 export function parseJson(res) {
+  if (res.status === 204) {
+    return null;
+  }
+
   return res.json();
 }

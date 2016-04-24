@@ -6,5 +6,5 @@ export default Ember.Route.extend({
       lessons: this.store.findAll(`free-lesson`),
       courses: this.store.findAll(`course-abstract`),
     });
-  }
+  },
 });

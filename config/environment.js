@@ -1,11 +1,12 @@
 /* jshint node: true */
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   var ENV = {
-    modulePrefix: 'embergrep-site',
+    modulePrefix: `embergrep-site`,
     environment: environment,
-    baseURL: '/',
-    locationType: 'auto',
+    apiUrl: `http://localhost:8000`,
+    baseURL: `/`,
+    locationType: `auto`,
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -13,14 +14,24 @@ module.exports = function(environment) {
       }
     },
 
+    'ember-simple-auth-token': {
+      serverTokenEndpoint: `http://localhost:8000/auth-token`,
+      identificationField: `username`,
+      timeFactor: 1000,
+    },
+
+    'ember-simple-auth': {
+      authorizer: `authorizer:token`,
+    },
+
     flashMessageDefaults: {
       timeout: 5000,
     },
 
     googleFonts: [
-      'Open+Sans:400,300',
-      'Play:400,700',
-      'Inconsolata',
+      `Open+Sans:400,300`,
+      `Play:400,700`,
+      `Inconsolata`,
     ],
 
     APP: {
@@ -29,7 +40,7 @@ module.exports = function(environment) {
     }
   };
 
-  if (environment === 'development') {
+  if (environment === `development`) {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -37,19 +48,19 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
-  if (environment === 'test') {
+  if (environment === `test`) {
     // Testem prefers this...
-    ENV.baseURL = '/';
-    ENV.locationType = 'none';
+    ENV.baseURL = `/`;
+    ENV.locationType = `none`;
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
-    ENV.APP.rootElement = '#ember-testing';
+    ENV.APP.rootElement = `#ember-testing`;
   }
 
-  if (environment === 'production') {
+  if (environment === `production`) {
 
   }
 

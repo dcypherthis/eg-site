@@ -5,14 +5,21 @@ export default Ember.Route.extend({
   flashMessages: Ember.inject.service(),
 
   rules: {
+    email: `email|required`,
+    password: `required`,
   },
 
   actions: {
     login(formValues) {
-      this.get('session').authenticate('authenticator:oauth2', formValues.email, formValues.password).catch((reason) => {
+      const credentials = {
+        identification: formValues.email,
+        password: formValues.password,
+      };
+
+      this.get(`session`).authenticate(`authenticator:jwt`, credentials).catch((reason) => {
         reason.errors.forEach((error) => {
           this.get(`flashMessages`).warning(error.detail);
-        })
+        });
       });
     },
   },

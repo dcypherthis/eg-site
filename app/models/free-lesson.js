@@ -6,5 +6,5 @@ export default DS.Model.extend({
   description: DS.attr(),
   lessonNotes: DS.attr(),
 
-  video: DS.belongsTo('free-video'),
+  video: DS.belongsTo(`free-video`),
 });

@@ -1,6 +1,3 @@
-import Ember from 'ember';
-const { resolve, reject } = Ember.RSVP;
-
 export function jsonRequestOptions(method, data) {
   return {
     method,

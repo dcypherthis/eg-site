@@ -24,6 +24,6 @@ export default Ember.Controller.extend({
           this.get(`flashMessages`).success(response.message);
           return this.transitionToRoute(`index`);
         });
-    }
-  }
+    },
+  },
 });

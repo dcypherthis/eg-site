@@ -9,5 +9,9 @@ export default Ember.Component.extend({
     toggleMenu() {
       this.$().toggleClass(`active`);
     },
+
+    logout() {
+      this.get(`session`).invalidate();
+    },
   },
 });

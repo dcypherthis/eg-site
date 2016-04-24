@@ -14,7 +14,7 @@ export default Ember.Route.extend({
       this.get('session').authenticate('authenticator:register', formValues.email, formValues.password, {password_confirmation: formValues.password_confirmation}).catch((reason) => {
         reason.errors.forEach((error) => {
           this.get(`flashMessages`).warning(error.detail);
-        })
+        });
       });
     },
   },

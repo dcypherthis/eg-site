@@ -17,7 +17,7 @@ export default Ember.Route.extend({
       this.get('session').authenticate('authenticator:jwt', credentials).catch((reason) => {
         reason.errors.forEach((error) => {
           this.get(`flashMessages`).warning(error.detail);
-        })
+        });
       });
     },
   },

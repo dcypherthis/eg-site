@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import moment from 'moment';
 
 export function secToHuman([seconds]/*, hash*/) {
   const duration = moment.duration(seconds, 'seconds');

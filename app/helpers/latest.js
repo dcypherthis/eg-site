@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export function newest([items, key]/*, hash*/) {
+export function newest([items]/*, hash*/) {
   const data = items.sortBy(items, (item) => {
     return Ember.get(item, 'created-at');
   });

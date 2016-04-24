@@ -15,7 +15,11 @@
             {{input type="password" class="form-field__input" id="register-password" placeholder="Password" value=register.password}}
           </div>
 
-          <div class="form-actions">
+          <div class="form-actions form-actions--between">
+            <p>
+              {{#link-to "forgot-password"}}Forgot your password?{{/link-to}}
+            </p>
+
             <button class="btn btn--success">login</button>
           </div>
         {{/validated-form}}</div>

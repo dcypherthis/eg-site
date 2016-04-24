@@ -1,8 +1,20 @@
-<h2>{{model.name}}</h2>
+<div class="yg-container">
+  <div class="yg-row yg-space-around">
+    <div class="card">
+      <h2 class="card__title">{{model.name}}</h2>
 
-<h3>Lessons</h3>
-<ul>
-  {{#each model.lessons as |lesson|}}
-    <li>{{lesson.title}} - {{sec-to-human lesson.time}}</li>
-  {{/each}}
-</ul>
+      <div class="card__body">
+        <p>{{model.description}}</p>
+      </div>
+
+      <div class="card-list">
+        <h3 class="card-list__header">Lessons</h3>
+        <ul class="card-list__content">
+          {{#each model.lessons as |lesson|}}
+            <li class="card-list__item">{{lesson.title}} - {{sec-to-human lesson.time}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

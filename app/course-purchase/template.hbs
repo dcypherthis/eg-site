@@ -1,1 +1,17 @@
-{{outlet}}
+<div class="yg-container">
+  <div class="yg-row yg-space-around">
+    <div class="card">
+      <h2 class="card__title">Purchase Course</h2>
+
+      <div class="card__body">
+        <h3>{{model.name}} - {{format-money (cents-to-dol model.price)}}</h3>
+
+        <div class="course-actions">
+          <button class="btn btn--success btn--small" {{action "startStripe" model}}>
+            Pay with Card
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,7 +9,7 @@ export default Ember.Service.extend({
   open(options) {
     return new Promise((resolve) => {
       const handler = StripeCheckout.configure({
-        key: this.stripeKey,
+        key: this.get(`stripeKey`),
         image: config.stripeCheckoutImg,
         locale: `auto`,
         token(token) {

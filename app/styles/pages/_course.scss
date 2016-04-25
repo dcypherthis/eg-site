@@ -1,4 +1,10 @@
 .course-actions {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: flex-end;
+
+  &__btn {
+    & + * {
+      margin-left: $gutter / 2;
+    }
+  }
 }

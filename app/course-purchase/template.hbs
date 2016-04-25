@@ -7,8 +7,14 @@
         <h3>{{model.name}} - {{format-money (cents-to-dol model.price)}}</h3>
 
         <div class="course-actions">
-          <button class="btn btn--success btn--small" {{action "startStripe" model}}>
-            Pay with Card
+          {{#if jwtInfo.card_brand}}
+            <button class="course-actions__btn btn btn--success btn--small" {{action "existingCard" model}}>
+              Pay with {{jwtInfo.card_brand}} {{jwtInfo.card_last_four}}
+            </button>
+          {{/if}}
+
+          <button class="course-actions__btn btn btn--success btn--small" {{action "startStripe" model}}>
+            Pay with New Card
           </button>
         </div>
       </div>

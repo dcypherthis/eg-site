@@ -9,12 +9,11 @@ export default Ember.Controller.extend({
     this._super(...rest);
   },
 
-  attemptPurchase(token) {
+  attemptPurchase(token, course, existing) {
     this.set(`purchasing`, true);
 
     const attempt = this.store.createRecord(`purchase-attempt`, {
-      course: this.get(`model`),
-      token: token.id,
+      course, token, existing
     });
 
     attempt.save()
@@ -23,10 +22,18 @@ export default Ember.Controller.extend({
         this.get(`flashMessages`).success(`Course purchased successfully!`);
 
         this.transitionToRoute(`index`);
+      }, (err) => {
+        this.set(`purchasing`, false);
+
+        this.get(`flashMessages`).warning(err.errors[0].detail);
       });
   },
 
   actions: {
+    existingCard(course) {
+      this.attemptPurchase(null, course, true);
+    },
+
     startStripe(course) {
       this.get(`stripe`).open({
         name: `EmberGrep`,
@@ -34,7 +41,7 @@ export default Ember.Controller.extend({
         amount: course.get(`price`),
         email: this.get(`jwtInfo.email`),
       }).then((token) => {
-        this.attemptPurchase(token);
+        this.attemptPurchase(token.id, course);
       });
     },
   },

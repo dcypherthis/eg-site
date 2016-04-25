@@ -21,6 +21,8 @@ module.exports = function (environment) {
 
     'ember-simple-auth-token': {
       serverTokenEndpoint: `http://localhost:8000/auth-token`,
+      refreshAccessTokens: true,
+      serverTokenRefreshEndpoint: `http://localhost:8000/refresh-token`,
       identificationField: `username`,
       timeFactor: 1000,
     },

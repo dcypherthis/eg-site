@@ -4,6 +4,7 @@ export default Ember.Controller.extend({
   stripe: Ember.inject.service(),
   jwtInfo: Ember.inject.service(),
   flashMessages: Ember.inject.service(),
+  refreshToken: Ember.inject.service(),
 
   init(...rest) {
     this._super(...rest);
@@ -13,13 +14,14 @@ export default Ember.Controller.extend({
     this.set(`purchasing`, true);
 
     const attempt = this.store.createRecord(`purchase-attempt`, {
-      course, token, existing
+      course, token, existing,
     });
 
     attempt.save()
       .then(() => {
         this.set(`purchasing`, false);
         this.get(`flashMessages`).success(`Course purchased successfully!`);
+        this.get(`refreshToken`).refresh();
 
         this.transitionToRoute(`index`);
       }, (err) => {

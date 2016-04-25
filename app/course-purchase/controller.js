@@ -10,6 +10,8 @@ export default Ember.Controller.extend({
   },
 
   attemptPurchase(token) {
+    this.set(`purchasing`, true);
+
     const attempt = this.store.createRecord(`purchase-attempt`, {
       course: this.get(`model`),
       token: token.id,
@@ -17,6 +19,7 @@ export default Ember.Controller.extend({
 
     attempt.save()
       .then(() => {
+        this.set(`purchasing`, false);
         this.get(`flashMessages`).success(`Course purchased successfully!`);
 
         this.transitionToRoute(`index`);

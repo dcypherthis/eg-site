@@ -15,3 +15,22 @@
     </div>
   </div>
 </div>
+
+{{#if purchasing}}
+<div class="modal">
+  <div class="modal__content">
+    <div class="yg-container">
+      <div class="yg-row yg-space-around">
+        <div class="card">
+          <h2 class="card__title">Purchase in Progress...</h2>
+          <div class="card__body">
+            <p>We're working to process your payment with Stripe.</p>
+
+            <p class="center">{{fa-icon "spinner" pulse=true size=2}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}

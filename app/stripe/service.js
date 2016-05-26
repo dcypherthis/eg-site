@@ -3,6 +3,8 @@
 import Ember from 'ember';
 import config from 'embergrep-site/config/environment';
 
+const Promise = Ember.RSVP.Promise;
+
 export default Ember.Service.extend({
   stripeKey: config.stripeKey,
 

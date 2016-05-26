@@ -1,3 +1,4 @@
+// jshint ignore:start
 import Ember from 'ember';
 import fetch from 'ember-network/fetch';
 import { jsonRequestOptions, parseJson } from 'embergrep-site/network-helpers';
@@ -29,3 +30,5 @@ export default Ember.Controller.extend({
     }
   }
 });
+
+// jshint ignore:end

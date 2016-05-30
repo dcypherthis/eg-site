@@ -1,0 +1,7 @@
+{{#if title}}
+  <h3 class="card-list__header">{{title}}</h3>
+{{/if}}
+<ul class="card-list__content">
+  {{yield (hash
+    item=(component 'card-list-item' separated=separated))}}
+</ul>

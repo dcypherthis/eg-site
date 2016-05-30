@@ -1,7 +1,7 @@
 <header class="home-hero">
   <div class="yg-container">
     <div class="home-hero__content">
-      {{#with (latest model.courses 'releaseDate') as |newestCourse|}}
+      {{#with (get (sort-by 'releaseDate:desc' model.courses) 'firstObject') as |newestCourse|}}
         <h2 class="home-hero__message">
           New Course: {{newestCourse.name}}
         </h2>

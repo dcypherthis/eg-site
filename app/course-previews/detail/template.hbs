@@ -1,27 +1,23 @@
 <div class="yg-container">
   <div class="yg-row yg-space-around">
-    <div class="card">
-      <h2 class="card__title">{{model.name}}</h2>
+    {{#eg-card title=model.name}}
+      <p>{{model.description}}</p>
 
-      <div class="card__body">
-        <p>{{model.description}}</p>
-
-        <div class="course-actions">
-          {{#unless model.purchased}}
-            {{#link-to "course-purchase" model class="btn btn--success btn--small"}}
-              Purchase {{format-money (cents-to-dol model.price)}}
-            {{/link-to}}
-          {{/unless}}
-        </div>
-
-        {{#card-list title="Lessons" as |list|}}
-          {{#each model.lessons as |lesson|}}
-            {{#list.item}}
-              {{lesson.title}} - {{sec-to-human lesson.time}}
-            {{/list.item}}
-          {{/each}}
-        {{/card-list}}
+      <div class="course-actions">
+        {{#unless model.purchased}}
+          {{#link-to "course-purchase" model class="btn btn--success btn--small" }}
+            Purchase {{format-money (cents-to-dol model.price)}}
+          {{/link-to}}
+        {{/unless}}
       </div>
-    </div>
+
+      {{#card-list title="Lessons" as |list|}}
+        {{#each model.lessons as |lesson|}}
+          {{#list.item}}
+            {{lesson.title}} - {{sec-to-human lesson.time}}
+          {{/list.item}}
+        {{/each}}
+      {{/card-list}}
+    {{/eg-card}}
   </div>
 </div>

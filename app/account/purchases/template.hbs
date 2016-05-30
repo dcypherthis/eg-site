@@ -2,11 +2,10 @@
   <div class="yg-row yg-space-around">
     <div class="card">
       <h2 class="card__title">Your Purchases</h2>
-
-      <div class="card-list">
-        <ul class="card-list__content">
+      <div class="card__body">
+        {{#card-list as |list|}}
           {{#each model as |purchase|}}
-            <li class="card-list__item">
+            {{#list.item}}
               <div class="purchase">
                 <h3>{{purchase.course.name}}</h3>
                 <p>
@@ -18,9 +17,9 @@
                   {{format-money (cents-to-dol purchase.purchasePrice)}}
                 </p>
               </div>
-            </li>
+            {{/list.item}}
           {{/each}}
-        </ul>
+        {{/card-list}}
       </div>
     </div>
   </div>

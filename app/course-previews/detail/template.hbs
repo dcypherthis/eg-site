@@ -12,16 +12,16 @@
               Purchase {{format-money (cents-to-dol model.price)}}
             {{/link-to}}
           {{/unless}}
-      </div>
-      </div>
+        </div>
 
-      {{#card-list title="Lessons" as |list|}}
-        {{#each model.lessons as |lesson|}}
-          {{#list.item}}
-            {{lesson.title}} - {{sec-to-human lesson.time}}
-          {{/list.item}}
-        {{/each}}
-      {{/card-list}}
+        {{#card-list title="Lessons" as |list|}}
+          {{#each model.lessons as |lesson|}}
+            {{#list.item}}
+              {{lesson.title}} - {{sec-to-human lesson.time}}
+            {{/list.item}}
+          {{/each}}
+        {{/card-list}}
+      </div>
     </div>
   </div>
 </div>

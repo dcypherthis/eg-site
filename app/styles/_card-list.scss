@@ -1,4 +1,11 @@
 .card-list {
+  margin-right: -$gutter;
+  margin-left: -$gutter;
+
+  * + & {
+    margin-top: $gutter;
+  }
+
   &__header {
     margin: 0;
     padding: $gutter / 2 $gutter;

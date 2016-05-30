@@ -1,1 +1,35 @@
-{{outlet}}
+{{log model}}
+
+<div class="yg-container">
+  <div class="yg-row yg-space-around">
+    {{#eg-card title="Purchased Courses"}}
+      {{#card-list as |list|}}
+        {{#each model.purchases as |course|}}
+          {{#list.item}}
+            <div class="purchase">
+              <h3>{{course.name}}</h3>
+            </div>
+          {{/list.item}}
+        {{else}}
+          {{#list.item}}
+            <h3>You have not purchased any courses yet.</h3>
+          {{/list.item}}
+        {{/each}}
+      {{/card-list}}
+
+      {{#card-list title="Available for Purchase" as |list|}}
+        {{#each (filter-by "purchased" false model.abstracts) as |course|}}
+          {{#list.item}}
+            <div class="purchase">
+              <h3>{{course.name}}</h3>
+            </div>
+          {{/list.item}}
+        {{else}}
+          {{#list.item}}
+            <h3>Stay tuned for more courses to come!</h3>
+          {{/list.item}}
+        {{/each}}
+      {{/card-list}}
+    {{/eg-card}}
+  </div>
+</div>

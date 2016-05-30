@@ -12,6 +12,6 @@ export default Model.extend({
   longDescription: attr(),
   comingSoon: attr(),
   purchased: attr(),
-  lessons: hasMany('lesson'),
+  // lessons: hasMany('lesson'),
   purchase: belongsTo('purchase')
 });

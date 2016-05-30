@@ -2,6 +2,10 @@
   display: flex;
   justify-content: flex-end;
 
+  &--separated {
+    justify-content: space-between;
+  }
+
   &__btn {
     & + * {
       margin-left: $gutter / 2;

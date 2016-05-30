@@ -21,5 +21,9 @@
 
   &__item {
     padding: $gutter / 2 $gutter;
+
+    * + &--separated {
+      border-top: $basic-border;
+    }
   }
 }

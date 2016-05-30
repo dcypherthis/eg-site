@@ -26,6 +26,10 @@
 
   text-shadow: $brand-text-shadow;
 
+  &--info {
+    background: $brand-gray;
+  }
+
   &--small {
     font-size: 1rem;
     line-height: 1.6rem;

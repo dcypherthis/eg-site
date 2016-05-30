@@ -47,6 +47,13 @@
                 {{link-to course.name 'course-previews.detail' course}}
               </li>
             {{/each}}
+            <li class="home-list__item">
+              {{#if session.isAuthenticated}}
+                {{link-to 'See all courses' 'courses'}}
+              {{else}}
+                {{link-to 'See all courses' 'course-previews'}}
+              {{/if}}
+            </li>
           </ul>
         </div>
       </div>

@@ -11,14 +11,6 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{app-footer}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#app-footer}}
-      template block text
-    {{/app-footer}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim().replace(/[\s\n]+/g, ' '),
+    '© 2016 Ember Grep - License a Ryan Tablada project');
 });

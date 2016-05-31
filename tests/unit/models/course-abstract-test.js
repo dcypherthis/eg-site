@@ -2,7 +2,7 @@ import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('course-abstract', 'Unit | Model | course abstract', {
   // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:lesson-abstract']
 });
 
 test('it exists', function(assert) {

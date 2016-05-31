@@ -7,7 +7,9 @@
         {{#each model.lessons as |lesson|}}
           {{#list.item}}
             {{#if lesson.isLoaded}}
-              {{lesson.title}} - {{sec-to-human lesson.time}}
+              {{#link-to "courses.detail.lesson" lesson}}
+                {{lesson.title}} - {{sec-to-human lesson.time}}
+              {{/link-to}}
             {{else}}
               {{fa-icon "spinner" pulse=true size="lg" class="fa--center"}}
             {{/if}}

@@ -8,6 +8,7 @@
   <li>{{link-to "home" "index" class="top-nav__link"}}</li>
 
   {{#if session.isAuthenticated}}
+    <li>{{link-to "courses" "courses" class="top-nav__link"}}</li>
     <li>{{link-to "account" "account.purchases" class="top-nav__link"}}</li>
     <li><a href="#" class="top-nav__link" {{action "logout"}}>logout</a></li>
   {{else}}

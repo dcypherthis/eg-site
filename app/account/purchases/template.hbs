@@ -1,27 +1,23 @@
 <div class="yg-container">
   <div class="yg-row yg-space-around">
-    <div class="card">
-      <h2 class="card__title">Your Purchases</h2>
-
-      <div class="card-list">
-        <ul class="card-list__content">
-          {{#each model as |purchase|}}
-            <li class="card-list__item">
-              <div class="purchase">
-                <h3>{{purchase.course.name}}</h3>
-                <p>
-                  <strong>Purchase Date:</strong>
-                  {{moment-format purchase.date "MMMM Do, YYYY"}}
-                </p>
-                <p>
-                  <strong>Purchase Price:</strong>
-                  {{format-money (cents-to-dol purchase.purchasePrice)}}
-                </p>
-              </div>
-            </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
+    {{#eg-card title="Your Purchases"}}
+      {{#card-list as |list|}}
+        {{#each model as |purchase|}}
+          {{#list.item}}
+            <div class="purchase">
+              <h3>{{purchase.course.name}}</h3>
+              <p>
+                <strong>Purchase Date:</strong>
+                {{moment-format purchase.date "MMMM Do, YYYY"}}
+              </p>
+              <p>
+                <strong>Purchase Price:</strong>
+                {{format-money (cents-to-dol purchase.purchasePrice)}}
+              </p>
+            </div>
+          {{/list.item}}
+        {{/each}}
+      {{/card-list}}
+    {{/eg-card}}
   </div>
 </div>

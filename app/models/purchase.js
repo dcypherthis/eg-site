@@ -4,5 +4,5 @@ export default DS.Model.extend({
   purchasePrice: DS.attr(),
   date: DS.attr(),
 
-  course: DS.belongsTo(),
+  course: DS.belongsTo('purchased-course'),
 });

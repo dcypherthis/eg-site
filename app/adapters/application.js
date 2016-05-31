@@ -4,7 +4,6 @@ import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 export default DS.JSONAPIAdapter.extend(DataAdapterMixin, {
   authorizer: `authorizer:token`,
   host: `http://localhost:8000`,
-  coalesceFindRequests: true,
 
   handleResponse(status) {
     if (status === 401 && this.get('session.isAuthenticated')) {

@@ -1,15 +1,17 @@
-import DS from 'ember-data';
+import Model from 'ember-data/model';
+import attr from 'ember-data/attr';
+import { hasMany } from 'ember-data/relationships';
 
-export default DS.Model.extend({
-  name: DS.attr(),
-  price: DS.attr(),
-  time: DS.attr(),
-  active: DS.attr(),
-  releaseDate: DS.attr(),
-  description: DS.attr(),
-  longDescription: DS.attr(),
-  comingSoon: DS.attr(),
-  purchased: DS.attr(),
+export default Model.extend({
+  name: attr(),
+  price: attr(),
+  time: attr(),
+  active: attr(),
+  releaseDate: attr(),
+  description: attr(),
+  longDescription: attr(),
+  comingSoon: attr(),
+  purchased: attr(),
 
-  lessons: DS.hasMany(`lesson-abstract`),
+  lessons: hasMany('lesson-abstract')
 });

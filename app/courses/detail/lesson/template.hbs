@@ -1,11 +1,38 @@
 <section class="lesson-section lesson-section--video-screen lesson-section--free-lesson">
-  <div class="yg-container">
-    <div class="yg-row">
-      <div class="yg-col-1of1">
-        <div class="video-screen">
-          {{ivy-videojs src=model.video.hdUrl controls=true fluid=true poster="/img/placeholder.png" setup=videoOptions}}
+  <div class="lesson-video">
+    <div class="yg-container">
+      <div class="yg-row">
+        <div class="yg-col-1of1">
+          <div class="video-screen">
+            {{ivy-videojs src=model.video.hdUrl controls=true fluid=true poster="/img/placeholder.png" setup=videoOptions}}
+          </div>
         </div>
       </div>
+
+      <div class="yg-row">
+        <div class="yg-col-1of1">
+          <div class="video-info">
+            <h2 class="video-info__title">{{model.title}}</h2>
+
+            <p class="video-info__description">{{model.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lesson-video__transport">
+      {{#if model.prevLesson}}
+        <div class="lesson-video__transport-button lesson-video__transport-button--left">
+          {{fa-icon "chevron-left"}}
+          {{model.prevLesson.title}}
+        </div>
+      {{/if}}
+
+      {{#if model.nextLesson}}
+        <div class="lesson-video__transport-button lesson-video__transport-button--right">
+          {{fa-icon "chevron-right"}}
+        </div>
+      {{/if}}
     </div>
   </div>
 </section>

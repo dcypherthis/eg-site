@@ -12,7 +12,7 @@
       </div>
 
       {{#card-list title="Lessons" as |list|}}
-        {{#each model.lessons as |lesson|}}
+        {{#each (sort-by "position" model.lessons) as |lesson|}}
           {{#list.item}}
             {{#if lesson.isLoaded}}
               {{lesson.title}} - {{sec-to-human lesson.time}}

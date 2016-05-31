@@ -4,7 +4,14 @@ import { module, test } from 'qunit';
 module('Unit | Helper | validation error');
 
 // Replace this with your real tests.
-test('it works', function(assert) {
-  let result = validationError([42]);
-  assert.ok(result);
+test('if validation is not possible return null', (assert) => {
+  const result = validationError([42]);
+
+  assert.equal(result, null);
 });
+
+// test('if validation is not possible return null', function(assert) {
+//   const result = validationError([42]);
+//
+//   assert.equal(result, null);
+// });

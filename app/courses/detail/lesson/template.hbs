@@ -22,16 +22,15 @@
 
     <div class="lesson-video__transport">
       {{#if model.prevLesson}}
-        <div class="lesson-video__transport-button lesson-video__transport-button--left">
+        {{#link-to "courses.detail.lesson" model.prevLesson class="lesson-video__transport-button lesson-video__transport-button--left"}}
           {{fa-icon "chevron-left"}}
-          {{model.prevLesson.title}}
-        </div>
+        {{/link-to}}
       {{/if}}
 
       {{#if model.nextLesson}}
-        <div class="lesson-video__transport-button lesson-video__transport-button--right">
+        {{#link-to "courses.detail.lesson" model.nextLesson class="lesson-video__transport-button lesson-video__transport-button--right"}}
           {{fa-icon "chevron-right"}}
-        </div>
+        {{/link-to}}
       {{/if}}
     </div>
   </div>

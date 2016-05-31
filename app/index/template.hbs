@@ -44,7 +44,11 @@
           <ul>
             {{#each model.courses as |course|}}
               <li class="home-list__item">
-                {{link-to course.name 'course-previews.detail' course}}
+                {{#if course.purchased}}
+                  {{link-to course.name 'courses.detail' course}}
+                {{else}}
+                  {{link-to course.name 'course-previews.detail' course}}
+                {{/if}}
               </li>
             {{/each}}
             <li class="home-list__item">

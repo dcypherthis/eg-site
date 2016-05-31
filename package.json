@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "ember build",
-    "start": "ember server",
+    "start": "ember fastboot --serve-assets",
     "test": "ember test"
   },
   "repository": "",
@@ -57,7 +57,7 @@
     "ember-simple-form": "1.0.1",
     "ember-yoga-sass": "1.0.0",
     "eslint": "^2.7.0",
-    "eslint-config-rtablada": "^1.0.1",
+    "eslint-config-rtablada": "^2.0.0",
     "ivy-tabs": "1.2.0",
     "ivy-videojs": "0.6.2",
     "jwt-decode": "2.0.1",

@@ -3,14 +3,6 @@
     {{#eg-card title=model.name}}
       <p>{{model.description}}</p>
 
-      <div class="course-actions">
-        {{#unless model.purchased}}
-          {{#link-to "course-purchase" model class="btn btn--success btn--small" }}
-            Purchase {{format-money (cents-to-dol model.price)}}
-          {{/link-to}}
-        {{/unless}}
-      </div>
-
       {{#card-list title="Lessons" as |list|}}
         {{#each model.lessons as |lesson|}}
           {{#list.item}}

@@ -27,7 +27,9 @@ Router.map(function routeMap() {
   this.route('course-purchase', {
     path: '/course-purchase/:course_abstract_id'
   });
-  this.route('courses', function() {});
+  this.route('courses', function() {
+    this.route(`detail`, { path: `/:purchased_course_id` });
+  });
 });
 
 export default Router;

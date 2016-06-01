@@ -20,3 +20,9 @@ install:
 
 script:
   - npm test
+
+before_script:
+  - ember sauce:connect
+
+after_script:
+  - ember sauce:disconnect
